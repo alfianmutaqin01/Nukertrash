@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="com.app.nukertrash.view.authentication.forgot.ForgotFragment"
+        android:label="fragment_forgot"
+        tools:layout="@layout/fragment_forgot" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.app.nukertrash.view.authentication.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeAdminFragment"
+            app:destination="@id/homeAdminFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeMasyarakatFragment"
+            app:destination="@id/homeMasyarakatFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homePetugasFragment"
+            app:destination="@id/homePetugasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.app.nukertrash.view.splashscreen.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.app.nukertrash.view.authentication.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.app.nukertrash.view.splashscreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeAdminFragment"
+            app:destination="@id/homeAdminFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeMasyarakatFragment"
+            app:destination="@id/homeMasyarakatFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homePetugasFragment"
+            app:destination="@id/homePetugasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.app.nukertrash.view.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.app.nukertrash.view.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeAdminFragment"
+        android:name="com.app.nukertrash.view.admin.home.HomeAdminFragment"
+        android:label="fragment_home_admin"
+        tools:layout="@layout/fragment_home_admin" >
+        <action
+            android:id="@+id/action_homeAdminFragment_to_tambahArtikelFragment"
+            app:destination="@id/tambahArtikelFragment" />
+        <action
+            android:id="@+id/action_homeAdminFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeAdminFragment_to_daftarPetugasFragment"
+            app:destination="@id/daftarPetugasFragment" />
+        <action
+            android:id="@+id/action_homeAdminFragment_to_rincianSaldoFragment"
+            app:destination="@id/rincianSaldoFragment" />
+        <action
+            android:id="@+id/action_homeAdminFragment_to_daftarPenggunaFragment"
+            app:destination="@id/daftarPenggunaFragment" />
+        <action
+            android:id="@+id/action_homeAdminFragment_to_hargaSembakoFragment"
+            app:destination="@id/hargaSembakoFragment" />
+        <action
+            android:id="@+id/action_homeAdminFragment_to_konfirmasiTransaksiFragment"
+            app:destination="@id/konfirmasiTransaksiFragment" />
+        <action
+            android:id="@+id/action_homeAdminFragment_to_riwayatKonfirmasiTransaksiFragment"
+            app:destination="@id/riwayatKonfirmasiTransaksiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeMasyarakatFragment"
+        android:name="com.app.nukertrash.view.masyarakat.home.HomeMasyarakatFragment"
+        android:label="fragment_home_masyarakat"
+        tools:layout="@layout/fragment_home_masyarakat" >
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_detailArtikelFragment"
+            app:destination="@id/detailArtikelFragment" />
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_listArtikelFragment"
+            app:destination="@id/listArtikelFragment" />
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_keteranganHargaSampahFragment"
+            app:destination="@id/keteranganHargaSampahFragment" />
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_jualSampahFragment"
+            app:destination="@id/jualSampahFragment" />
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_jadwalPengambilanSampahMasyarakatFragment"
+            app:destination="@id/jadwalPengambilanSampahMasyarakatFragment" />
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_halamanPenarikanFragment"
+            app:destination="@id/halamanPenarikanFragment" />
+        <action
+            android:id="@+id/action_homeMasyarakatFragment_to_riwayatTransaksiMasyarakatFragment"
+            app:destination="@id/riwayatTransaksiMasyarakatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePetugasFragment"
+        android:name="com.app.nukertrash.view.petugas.home.HomePetugasFragment"
+        android:label="fragment_home_petugas"
+        tools:layout="@layout/fragment_home_petugas" >
+        <action
+            android:id="@+id/action_homePetugasFragment_to_prosesSampahFragment"
+            app:destination="@id/prosesSampahFragment" />
+        <action
+            android:id="@+id/action_homePetugasFragment_to_daftarSampahFragment"
+            app:destination="@id/daftarSampahFragment" />
+        <action
+            android:id="@+id/action_homePetugasFragment_to_jadwalPengambilanSampahFragment"
+            app:destination="@id/jadwalPengambilanSampahFragment" />
+        <action
+            android:id="@+id/action_homePetugasFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailArtikelFragment"
+        android:name="com.app.nukertrash.view.masyarakat.artikel.DetailArtikelFragment"
+        android:label="fragment_detail_artikel"
+        tools:layout="@layout/fragment_detail_artikel" />
+    <fragment
+        android:id="@+id/listArtikelFragment"
+        android:name="com.app.nukertrash.view.masyarakat.artikel.ListArtikelFragment"
+        android:label="fragment_list_artikel"
+        tools:layout="@layout/fragment_list_artikel" >
+        <action
+            android:id="@+id/action_listArtikelFragment_to_detailArtikelFragment"
+            app:destination="@id/detailArtikelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/halamanPenarikanFragment"
+        android:name="com.app.nukertrash.view.masyarakat.home.tariksaldo.HalamanPenarikanFragment"
+        android:label="fragment_halaman_penarikan"
+        tools:layout="@layout/fragment_halaman_penarikan" >
+        <action
+            android:id="@+id/action_halamanPenarikanFragment_to_tunaiPenarikanFragment"
+            app:destination="@id/tunaiPenarikanFragment" />
+        <action
+            android:id="@+id/action_halamanPenarikanFragment_to_sembakoPenarikanFragment"
+            app:destination="@id/sembakoPenarikanFragment" />
+        <action
+            android:id="@+id/action_halamanPenarikanFragment_to_rekeningPenarikanFragment"
+            app:destination="@id/rekeningPenarikanFragment" />
+        <action
+            android:id="@+id/action_halamanPenarikanFragment_to_listrikPenarikanFragment"
+            app:destination="@id/listrikPenarikanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jadwalPengambilanSampahMasyarakatFragment"
+        android:name="com.app.nukertrash.view.masyarakat.jadwal.JadwalPengambilanSampahMasyarakatFragment"
+        android:label="fragment_jadwal_pengambilan_sampah_masyarakat"
+        tools:layout="@layout/fragment_jadwal_pengambilan_sampah_masyarakat" />
+    <fragment
+        android:id="@+id/jualSampahFragment"
+        android:name="com.app.nukertrash.view.masyarakat.jualsampah.JualSampahFragment"
+        android:label="fragment_jual_sampah"
+        tools:layout="@layout/fragment_jual_sampah" >
+        <action
+            android:id="@+id/action_jualSampahFragment_to_jualSampahBerhasilFragment"
+            app:destination="@id/jualSampahBerhasilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jualSampahBerhasilFragment"
+        android:name="com.app.nukertrash.view.masyarakat.jualsampah.JualSampahBerhasilFragment"
+        android:label="fragment_jual_sampah_berhasil"
+        tools:layout="@layout/fragment_jual_sampah_berhasil" />
+    <fragment
+        android:id="@+id/keteranganHargaSampahFragment"
+        android:name="com.app.nukertrash.view.masyarakat.keterangan.KeteranganHargaSampahFragment"
+        android:label="fragment_keterangan_harga_sampah"
+        tools:layout="@layout/fragment_keterangan_harga_sampah" />
+    <fragment
+        android:id="@+id/listrikPenarikanFragment"
+        android:name="com.app.nukertrash.view.masyarakat.home.tariksaldo.ListrikPenarikanFragment"
+        android:label="fragment_listrik_penarikan"
+        tools:layout="@layout/fragment_listrik_penarikan" >
+        <action
+            android:id="@+id/action_listrikPenarikanFragment_to_transaksiBerhasilFragment"
+            app:destination="@id/transaksiBerhasilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rekeningPenarikanFragment"
+        android:name="com.app.nukertrash.view.masyarakat.home.tariksaldo.RekeningPenarikanFragment"
+        android:label="fragment_rekening_penarikan"
+        tools:layout="@layout/fragment_rekening_penarikan" >
+        <action
+            android:id="@+id/action_rekeningPenarikanFragment_to_transaksiBerhasilFragment"
+            app:destination="@id/transaksiBerhasilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/riwayatTransaksiMasyarakatFragment"
+        android:name="com.app.nukertrash.view.masyarakat.riwayat.RiwayatTransaksiMasyarakatFragment"
+        android:label="fragment_riwayat_transaksi_masyarakat"
+        tools:layout="@layout/fragment_riwayat_transaksi_masyarakat" />
+    <fragment
+        android:id="@+id/sembakoPenarikanFragment"
+        android:name="com.app.nukertrash.view.masyarakat.home.tariksaldo.SembakoPenarikanFragment"
+        android:label="fragment_sembako_penarikan"
+        tools:layout="@layout/fragment_sembako_penarikan" >
+        <action
+            android:id="@+id/action_sembakoPenarikanFragment_to_transaksiBerhasilFragment"
+            app:destination="@id/transaksiBerhasilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transaksiBerhasilFragment"
+        android:name="com.app.nukertrash.view.masyarakat.home.tariksaldo.TransaksiBerhasilFragment"
+        android:label="fragment_transaksi_berhasil"
+        tools:layout="@layout/fragment_transaksi_berhasil" />
+    <fragment
+        android:id="@+id/tunaiPenarikanFragment"
+        android:name="com.app.nukertrash.view.masyarakat.home.tariksaldo.TunaiPenarikanFragment"
+        android:label="fragment_tunai_penarikan"
+        tools:layout="@layout/fragment_tunai_penarikan" >
+        <action
+            android:id="@+id/action_tunaiPenarikanFragment_to_transaksiBerhasilFragment"
+            app:destination="@id/transaksiBerhasilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/daftarSampahFragment"
+        android:name="com.app.nukertrash.view.petugas.sampah.DaftarSampahFragment"
+        android:label="fragment_daftar_sampah"
+        tools:layout="@layout/fragment_daftar_sampah" >
+        <action
+            android:id="@+id/action_daftarSampahFragment_to_editHargaSampahFragment"
+            app:destination="@id/editHargaSampahFragment" />
+        <action
+            android:id="@+id/action_daftarSampahFragment_to_tambahJenisSampahFragment"
+            app:destination="@id/tambahJenisSampahFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editHargaSampahFragment"
+        android:name="com.app.nukertrash.view.petugas.sampah.EditHargaSampahFragment"
+        android:label="fragment_edit_harga_sampah"
+        tools:layout="@layout/fragment_edit_harga_sampah" />
+    <fragment
+        android:id="@+id/editJadwalPengambilanSampahFragment"
+        android:name="com.app.nukertrash.view.petugas.jadwal.EditJadwalPengambilanSampahFragment"
+        android:label="fragment_edit_jadwal_pengambilan_sampah"
+        tools:layout="@layout/fragment_edit_jadwal_pengambilan_sampah" />
+    <fragment
+        android:id="@+id/jadwalPengambilanSampahFragment"
+        android:name="com.app.nukertrash.view.petugas.jadwal.JadwalPengambilanSampahFragment"
+        android:label="fragment_jadwal_pengambilan_sampah"
+        tools:layout="@layout/fragment_jadwal_pengambilan_sampah" >
+        <action
+            android:id="@+id/action_jadwalPengambilanSampahFragment_to_editJadwalPengambilanSampahFragment"
+            app:destination="@id/editJadwalPengambilanSampahFragment" />
+        <action
+            android:id="@+id/action_jadwalPengambilanSampahFragment_to_tambahJadwalPengambilanSampahFragment"
+            app:destination="@id/tambahJadwalPengambilanSampahFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konfirmasiTransaksiFragment"
+        android:name="com.app.nukertrash.view.admin.transaksi.KonfirmasiTransaksiFragment"
+        android:label="fragment_konfirmasi_transaksi"
+        tools:layout="@layout/fragment_konfirmasi_transaksi" />
+    <fragment
+        android:id="@+id/rincianSaldoFragment"
+        android:name="com.app.nukertrash.view.admin.home.rinciansaldo.RincianSaldoFragment"
+        android:label="fragment_rincian_saldo"
+        tools:layout="@layout/fragment_rincian_saldo" />
+    <fragment
+        android:id="@+id/riwayatKonfirmasiTransaksiFragment"
+        android:name="com.app.nukertrash.view.admin.transaksi.RiwayatKonfirmasiTransaksiFragment"
+        android:label="fragment_riwayat_konfirmasi_transaksi"
+        tools:layout="@layout/fragment_riwayat_konfirmasi_transaksi" />
+    <fragment
+        android:id="@+id/tambahArtikelFragment"
+        android:name="com.app.nukertrash.view.admin.artikel.TambahArtikelFragment"
+        android:label="fragment_tambah_artikel"
+        tools:layout="@layout/fragment_tambah_artikel" />
+    <fragment
+        android:id="@+id/prosesSampahFragment"
+        android:name="com.app.nukertrash.view.petugas.home.ProsesSampahFragment"
+        android:label="fragment_proses_sampah"
+        tools:layout="@layout/fragment_proses_sampah" />
+    <fragment
+        android:id="@+id/tambahJenisSampahFragment"
+        android:name="com.app.nukertrash.view.petugas.sampah.TambahJenisSampahFragment"
+        android:label="fragment_tambah_jenis_sampah"
+        tools:layout="@layout/fragment_tambah_jenis_sampah" />
+    <fragment
+        android:id="@+id/daftarPenggunaFragment"
+        android:name="com.app.nukertrash.view.admin.home.pengguna.DaftarPenggunaFragment"
+        android:label="fragment_daftar_pengguna"
+        tools:layout="@layout/fragment_daftar_pengguna" />
+    <fragment
+        android:id="@+id/daftarPetugasFragment"
+        android:name="com.app.nukertrash.view.admin.home.petugas.DaftarPetugasFragment"
+        android:label="fragment_daftar_petugas"
+        tools:layout="@layout/fragment_daftar_petugas" >
+        <action
+            android:id="@+id/action_daftarPetugasFragment_to_tambahPetugasFragment"
+            app:destination="@id/tambahPetugasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hargaSembakoFragment"
+        android:name="com.app.nukertrash.view.admin.sembako.HargaSembakoFragment"
+        android:label="fragment_harga_sembako"
+        tools:layout="@layout/fragment_harga_sembako" />
+    <fragment
+        android:id="@+id/tambahPetugasFragment"
+        android:name="com.app.nukertrash.view.admin.home.petugas.TambahPetugasFragment"
+        android:label="fragment_tambah_petugas"
+        tools:layout="@layout/fragment_tambah_petugas" />
+    <fragment
+        android:id="@+id/tambahJadwalPengambilanSampahFragment"
+        android:name="com.app.nukertrash.view.petugas.jadwal.TambahJadwalPengambilanSampahFragment"
+        android:label="fragment_tambah_jadwal_pengambilan_sampah"
+        tools:layout="@layout/fragment_tambah_jadwal_pengambilan_sampah" />
+</navigation>

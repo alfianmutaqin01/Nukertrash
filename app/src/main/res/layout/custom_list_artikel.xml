@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="342dp"
+    android:layout_height="99dp"
+    app:cardBackgroundColor="#00000000"
+    android:layout_marginBottom="15dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:background="@drawable/stroke_outline"
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_centerVertical="true"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bank_sampah"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:lineSpacingExtra="3dp"
+            android:layout_toRightOf="@id/ivImage"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingin Terhindar dari Penyakit Demam Berdarah? Yuk Simak Tips Berikut Ini!"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
